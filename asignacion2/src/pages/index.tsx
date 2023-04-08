@@ -20,7 +20,7 @@ const Home = () => {
     const fetchImages = async () => {
       try {
         const response = await fetch(
-          `https://api.unsplash.com/photos?client_id=UZ2k0BvbdRnEUZKupPKqfU_p73Esu06dv2c_ypPCQ5g&per_page=10&page=${page}`
+          `https://api.unsplash.com/photos?client_id=ACCESS_KEY&per_page=10&page=${page}`//CAMBIAR "ACCESS_KEY" por el access key de su api
         );
         const data = await response.json();
 
