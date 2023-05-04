@@ -63,7 +63,7 @@ const Home = () => {
       <div style={{ display: 'flex', flexWrap: 'wrap' }}>
         {renderedImages}
       </div>
-      <Button variant ="primary" onClick={loadMoreImages}>Cargar más imágenes</Button>
+      <Button variant="secondary" size="sm" onClick={loadMoreImages}>Cargar más imágenes</Button>
     </div>
   );
 };
