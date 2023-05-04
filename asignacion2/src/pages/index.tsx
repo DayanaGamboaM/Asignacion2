@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 
+import Button from 'react-bootstrap/Button';
+
 interface UnsplashImage {
   id: string;
   urls: {
@@ -60,7 +62,7 @@ const Home = () => {
       <div style={{ display: 'flex', flexWrap: 'wrap' }}>
         {renderedImages}
       </div>
-      <button onClick={loadMoreImages}>Cargar más imágenes</button>
+      <Button variant ="primary" onClick={loadMoreImages}>Cargar más imágenes</Button>
     </div>
   );
 };
