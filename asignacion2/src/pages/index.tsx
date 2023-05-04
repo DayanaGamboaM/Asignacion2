@@ -60,12 +60,14 @@ const Home = () => {
   );
 
   return (
-    <div className=''>
+    <div className='bg-light'>
       <h1 className='fs-1 text-center '>Imágenes de Unsplash</h1>
       <div style={{ display: 'flex', flexWrap: 'wrap' }}>
         {renderedImages}
       </div>
-      <Button variant="secondary" onClick={loadMoreImages}>Cargar más imágenes</Button>
+      <div className="d-flex justify-content-center mt-4">
+      <Button variant="dark" onClick={loadMoreImages}>Cargar más imágenes</Button>
+      </div>
     </div>
   );
 };
