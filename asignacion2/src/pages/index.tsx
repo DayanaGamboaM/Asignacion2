@@ -48,7 +48,8 @@ const Home = () => {
   const renderedImages = useMemo(
     () =>
       images.map((image) => (
-        <Card key={image.id} style={{ width: '18rem', margin: '8px' }}>
+        <Card key={image.id}  className="d-flex justify-content-center align-items-center" 
+         style={{ width: '18rem', margin: '8px' }}>
           <Card.Img variant="top" src={image.urls.thumb} alt={image.alt_description} width={150} height={300} />
           <Card.Body>
             <Card.Title>{image.alt_description}</Card.Title>
