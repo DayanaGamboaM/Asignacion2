@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Card, Button } from 'react-bootstrap';
 
-import Button from 'react-bootstrap/Button';
 
 interface UnsplashImage {
   id: string;
@@ -45,25 +45,24 @@ const Home = () => {
     fetchImages();
   }, [page]);
 
-  const renderedImages = useMemo(() =>
-    images.map((image) => (
-      <img
-        key={image.id}
-        src={image.urls.thumb}
-        alt={image.alt_description}
-        style={{ width: '200px', height: '200px', objectFit: 'cover', margin: '8px' }}
-      />
-    )),
+  const renderedImages = useMemo(
+    () =>
+      images.map((image) => (
+        <Card key={image.id} style={{ width: '18rem', margin: '8px' }}>
+          <Card.Img variant="top" src={image.urls.thumb} alt={image.alt_description} width={150} height={300} />
+          <Card.Body>
+            <Card.Title>{image.alt_description}</Card.Title>
+          </Card.Body>
+        </Card>
+      )),
     [images]
   );
 
   return (
     <div>
       <h1>Imágenes de Unsplash</h1>
-      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-        {renderedImages}
-      </div>
-      <Button variant ="primary" onClick={loadMoreImages}>Cargar más imágenes</Button>
+      <div style={{ display: 'flex', flexWrap: 'wrap' }}>{renderedImages}</div>
+      <button onClick={loadMoreImages}>Cargar más imágenes</button>
     </div>
   );
 };
