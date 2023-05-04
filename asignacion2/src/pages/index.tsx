@@ -59,13 +59,13 @@ const Home = () => {
   );
 
   return (
-    <div className='bg-light'>
-      <h1 className='fs-1 text-center p-5'>Imágenes de Unsplash</h1>
-      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+    <div className='bg-light '>
+      <h1 className='fs-1 text-center '>Imágenes de Unsplash</h1>
+      <div style={{ display: 'flex', flexWrap: 'wrap' }} className='d-flex justify-content-center align-items-center'>
         {renderedImages}
       </div>
       <div className="d-flex justify-content-center mt-4">
-      <Button variant="secondary" onClick={loadMoreImages}>Cargar más imágenes</Button>
+      <Button variant="dark" onClick={loadMoreImages}>Cargar más imágenes</Button>
       </div>
     </div>
   );
