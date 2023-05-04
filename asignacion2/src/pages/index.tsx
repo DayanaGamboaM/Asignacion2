@@ -61,8 +61,10 @@ const Home = () => {
   return (
     <div>
       <h1>Imágenes de Unsplash</h1>
-      <div style={{ display: 'flex', flexWrap: 'wrap' }}>{renderedImages}</div>
-      <button onClick={loadMoreImages}>Cargar más imágenes</button>
+      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+        {renderedImages}
+      </div>
+      <Button variant="secondary" size="sm" onClick={loadMoreImages}>Cargar más imágenes</Button>
     </div>
   );
 };
