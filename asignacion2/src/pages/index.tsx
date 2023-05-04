@@ -59,7 +59,7 @@ const Home = () => {
   );
 
   return (
-    <div className=''>
+    <div className='bg-light'>
       <h1 className='fs-1 text-center '>Imágenes de Unsplash</h1>
       <div style={{ display: 'flex', flexWrap: 'wrap' }}>
         {renderedImages}
