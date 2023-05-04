@@ -60,7 +60,7 @@ const Home = () => {
 
   return (
     <div className='bg-light '>
-      <h1 className='fs-1 text-center '>Imágenes de Unsplash</h1>
+      <h1 className='fs-1 text-center p-4'>Imágenes de Unsplash</h1>
       <div style={{ display: 'flex', flexWrap: 'wrap' }} className='d-flex justify-content-center align-items-center'>
         {renderedImages}
       </div>
