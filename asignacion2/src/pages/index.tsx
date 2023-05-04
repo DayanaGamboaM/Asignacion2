@@ -65,7 +65,7 @@ const Home = () => {
         {renderedImages}
       </div>
       <div className="d-flex justify-content-center mt-4">
-      <Button variant="secondary" onClick={loadMoreImages}>Cargar más imágenes</Button>
+      <Button variant="dark" onClick={loadMoreImages}>Cargar más imágenes</Button>
       </div>
     </div>
   );
